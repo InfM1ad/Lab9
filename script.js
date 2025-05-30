@@ -15,20 +15,6 @@ const movies = [
     videoSource: "youtube",
   },
   {
-    id: 2,
-    title: "Бэтмен",
-    poster: "/placeholder.svg?height=600&width=400", // Временно используем placeholder
-    genre: "Боевик, криминал, драма",
-    director: "Мэтт Ривз",
-    cast: "Роберт Паттинсон, Зои Кравиц, Джеффри Райт, Колин Фаррелл",
-    ageRating: "16+",
-    duration: "176 мин.",
-    description:
-      "Когда серийный убийца начинает убивать ключевых политических фигур в Готэме, Бэтмен вынужден расследовать скрытую коррупцию города и поставить под сомнение причастность своей семьи.",
-    trailerUrl: "https://www.youtube.com/embed/mqqft2x_Aa4",
-    videoSource: "youtube",
-  },
-  {
     id: 3,
     title: "Душа",
     poster: "https://avatars.mds.yandex.net/get-ott/1531675/2a00000187127d6e8298d27d6eacdab8ed35/orig", 
