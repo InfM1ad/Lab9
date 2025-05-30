@@ -1,0 +1,261 @@
+/* Основные стили */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #111827;
+  color: #ffffff;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #ffffff;
+}
+
+/* Стили карточки фильма */
+.movie-card {
+  background-color: #1f2937;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  border: 1px solid #374151;
+}
+
+.movie-content {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+  .movie-content {
+    flex-direction: row;
+  }
+}
+
+.movie-poster {
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .movie-poster {
+    width: 33.333%;
+  }
+}
+
+.movie-poster img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.movie-details {
+  padding: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .movie-details {
+    width: 66.666%;
+  }
+}
+
+.movie-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+.movie-info-list {
+  margin-bottom: 2rem;
+}
+
+.movie-info-item {
+  display: flex;
+  margin-bottom: 0.75rem;
+  color: #9ca3af;
+}
+
+.movie-info-label {
+  width: 8rem;
+  font-weight: 600;
+  color: #d1d5db;
+}
+
+.buy-ticket-btn {
+  background-color: #bd257f;
+  color: white;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.buy-ticket-btn:hover {
+  background-color: #d93c99;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(189, 37, 127, 0.3);
+}
+
+.movie-description-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.movie-description {
+  color: #9ca3af;
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+/* Стили трейлера */
+.trailer-section {
+  padding: 2rem;
+  border-top: 1px solid #374151;
+}
+
+.trailer-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+.trailer-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 соотношение сторон */
+  background-color: #000;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.trailer-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: all 0.3s ease;
+}
+
+.trailer-placeholder:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.trailer-placeholder img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.play-button {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  background-color: rgba(189, 37, 127, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.play-button:hover {
+  background-color: rgba(189, 37, 127, 1);
+  transform: scale(1.1);
+}
+
+.play-button svg {
+  width: 2.5rem;
+  height: 2.5rem;
+  fill: white;
+  margin-left: 4px; /* Небольшой сдвиг для визуального центрирования */
+}
+
+.trailer-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 8px;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  font-size: 1.2rem;
+  color: #9ca3af;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .movie-title {
+    font-size: 2rem;
+  }
+
+  .movie-details {
+    padding: 1.5rem;
+  }
+
+  .trailer-section {
+    padding: 1.5rem;
+  }
+
+  .movie-info-label {
+    width: 6rem;
+    font-size: 0.9rem;
+  }
+
+  .play-button {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .play-button svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
